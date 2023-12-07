@@ -1,0 +1,27 @@
+
+svg {
+  vertical-align: middle;
+}
+
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+.box {
+  border: 1px solid rgb(114, 114, 114);
+  padding: 5px;
+  margin: 8px;
+}
+
+.stats span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}

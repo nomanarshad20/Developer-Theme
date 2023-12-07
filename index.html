@@ -31,6 +31,8 @@
     <!-- for github repos -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://gitlist.himdek.com/GitHubList.js"></script>
+    <link id="theme-style" rel="stylesheet" href="assets/css/github.css">
+   
     
 </head> 
 
@@ -209,28 +211,23 @@
                     </div><!--//section-inner-->                 
                 </section><!--//section-->
 
-
-                <section class="github section">
+                <section class="github section" >
                     <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
-                        
-                        <div id="github-graph" class="github-graph">
+                        <h2 class="heading">My GitHub Repositories</h2>
+                        <p>Products Designed For Clients Have Private Repositories In  <a href="https://bitbucket.org/nomanarshad/workspace/repositories/" style="color: red;">BitBuket</a></p>
+                    <div style="height: 400px;overflow-y: scroll;">
+                        <div id="IdOfTheHTMLElement"></div>
+                    </div>
+                </div>
+                </section>
+               
 
-                        </div><!--//github-graph-->
-
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget.        
-                        <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="ghfeed" class="ghfeed">
-                        </div><!--//ghfeed-->
-                        
-                    </div><!--//secton-inner-->
-                </section><!--//section-->
+                
 
                 <section class="github section">
                     <!-- https://www.twilik.com/embed-your-medium-blog -->
                     <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">My Article Feed</h2>
+                        <h2 class="heading">Medium Article Feed</h2>
                         <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@nomanarshad20/"
                         data-maxcols="1" 
                         data-layout="grid" 
@@ -240,6 +237,10 @@
                         data-offset="-100">
                     </div><!--//secton-inner-->
                 </section><!--//section-->
+
+
+
+             
 
 
 
@@ -471,7 +472,18 @@
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>     
     
+    <!-- rss feed for medium -->
     <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+
+    <!-- github feeds -->
+    <script>
+        listrepos("nomanarshad20", document.getElementById("IdOfTheHTMLElement"), showProfile=false, showPagesHome=false).then(reposcount => {
+          // In this section, variable reposcount stores the total number of Repositories.
+        });
+        </script>
+
+        
+
 </body>
 </html> 
 
